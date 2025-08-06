@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yastık Altı</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#giris">Anasayfa</a>
+        <a href="#bizkimiz">Biz Kimiz?</a>
+        <a href="#kategoriler">Kategoriler</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Image Section -->
+        <section id="giris" class="image">
+            <img src="/static/img/official.jpg" alt="Yastık Altı">
+            <h1>Yastık Altı</h1>
+        </section>
+
+        <!-- Biz Kimiz -->
+        <section id="bizkimiz">
+            <h2>Biz Kimiz ?</h2>
+            <p>
+                Yastık Altı; yazının sıcaklığını, bağımsızlığını ve samimiyetini taşıyan bir kolektif fanzin grubudur. Yayınladığımız içerikler; düşünsel denemelerden şiirlere, sokak gözlemlerinden edebiyata uzanır. Bu platformda her satır, gerçek bir kalbin dokunuşudur. 
+            </p>
+        </section>
+
+        <!-- Kategoriler -->
+        <section id="kategoriler">
+            <h2>Kategoriler</h2>
+            <div class="categories">
+                <div class="cat-card"><h3>Fanzin</h3><a href="#">Okumaya Başla</a></div>
+                <div class="cat-card"><h3>Seyahat Yazıları</h3><a href="#">Yolda Olanlar</a></div>
+                <div class="cat-card"><h3>Felsefe</h3><a href="#">Düşünsel Metinler</a></div>
+                <div class="cat-card"><h3>Edebiyat</h3><a href="#">Öykü ve Denemeler</a></div>
+            </div>
+        </section>
+
+        <!-- İletişim -->
+        <section id="iletisim" class="contact">
+            <h2>İletişim</h2>
+            <p>
+                📧 <a href="mailto:yastikalti@gmail.com">yastikalti@gmail.com</a><br>
+                📷 <a href="https://instagram.com/yastikalti" target="_blank">instagram.com/yastikalti</a>
+            </p>
+        </section>
+    </div>
+
+   <footer>
+    © 2025 Yastık Altı. Tüm Hakları Saklıdır.<br>
+    Powered by Gentleman
+</footer>
+
+
+    <!-- Scroll Animasyonları -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.cat-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>
